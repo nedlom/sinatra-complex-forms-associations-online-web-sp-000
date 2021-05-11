@@ -36,6 +36,7 @@ class PetsController < ApplicationController
   patch '/pets/:id' do 
     
     @pet = Pet.find(params[:id])
+    binding.pry
     @owner = Owner.find_by_name(params["owner"]["name"])
     @pet.update(name: params["pet_name"], owner: @owner)
     
