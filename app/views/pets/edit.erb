@@ -12,8 +12,8 @@
     <p>Select an existing pet or create a new one below.</p>
  
     <h3>Existing Owners</h3>
-    <% @pets.each do |pet| %>
-      <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%='checked' if @owner.pets.include?(pet) %>><%= pet.name %></input><br>
+    <% @owners.each do |owner| %>
+      <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id %>" value="<%= pet.id %>" <%='checked' if @pet.owner == owner %>><%= pet.name %></input><br>
     <% end %>
     <br>
  
