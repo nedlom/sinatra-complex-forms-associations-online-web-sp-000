@@ -36,6 +36,7 @@ class PetsController < ApplicationController
   patch '/pets/:id' do 
     binding.pry
     
+    
     redirect to "pets/#{@pet.id}"
   end
 end
